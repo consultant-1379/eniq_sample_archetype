@@ -1,0 +1,63 @@
++----------------------------+
+Relevant pom.xml Do(s) and DO Don't(s)
++----------------------------+
+
+Do(s)
+================================
+
+DO use inheritance and integration pom.xml
+DO use ${project.version}
+
+Don't(s)
+================================
+
+DO NOT change the groupId/artifactId ...
+
+CXP Module
+================================
+A valid CXP number must be used, if you want to release your project.
+
+If this repository is used for creating RPM:-
+	- Rename the ERIC<artifactId>_CXP1234567-rpm TO ERIC<artifactId>_<CXPNumber>
+	- Delete the ERIC<artifactId>_CXP1234567-pkg
+	- Make appropriate changes to the POM's
+
+If this repository is used for creating PKG:-
+	- Rename the ERIC<artifactId>_CXP1234567-pkg TO ERIC<artifactId>_<CXPNumber>
+	- Delete the ERIC<artifactId>_CXP1234567-rpm
+	- Make appropriate changes to the POM's
+
+If this repository is used for creating BOTH RPM and PKG:-
+	- Rename the ERIC<artifactId>_CXP1234567-rpm TO ERIC<artifactId>_<RPMCXPNumber>
+	- Rename the ERIC<artifactId>_CXP1234567-pkg TO ERIC<artifactId>_<PKGCXPNumber>
+	- Make appropriate changes to the POM's
+
+Pls Note: In case you need any assistance, please contact Assure CI Execution Team
+
++----------------------------+
+BUILDING
++----------------------------+
+
+- By default build is for devel-environment (no LITP specific implementation modules)
+- For production environment you should do a build with activated 'production' profile (mvn clean install -P production_env)
+(Please check pom.xml in /ear/ submodule
+
+
+
++----------------------------+
+DEPLOYING TO JBOSS
++----------------------------+
+
+System property JBOSS_HOME should point to the installation folder of JBoss.
+
+Once you started JBoss you have to execute mvn jboss-as:deploy to deploy service
+
+
++----------------------------+
+LINKS FOR MORE USEFUL INFO.
++----------------------------+
+
+CI Execution Main Confluence Page
+=================================
+
+https://confluence-oss.lmera.ericsson.se/display/CIE/Assurance+CI+Execution

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="ci-execution-sample-archtype"
+    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <fileSets>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>.project</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>CI-USEFUL-INFO.txt</include>
+        <include>.gitignore</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+
+  <modules>
+
+    <module id="${rootArtifactId}-jar" dir="__rootArtifactId__-jar" name="${rootArtifactId}-jar">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+        <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+            <include>**/*.gitignore</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.xml</include>
+            <include>**/*.gitignore</include>
+          </includes>
+        </fileSet>
+	<fileSet filtered="true" encoding="UTF-8">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.java</include>
+            <include>**/*.gitignore</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/test/resources</directory>
+          <includes>
+            <include>**/*.xml</include>
+            <include>**/*.gitignore</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>.project</include>
+            <include>.classpath</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>.gitignore</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+
+     <module id="ERIC${rootArtifactId}_CXP1234567-rpm" dir="ERIC__rootArtifactId___CXP1234567-rpm" name="ERIC${rootArtifactId}_CXP1234567-rpm">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/scripts</directory>
+          <includes>
+            <include>**/*.sh</include>
+	    <include>**/*.gitignore</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.xml</include>
+            <include>**/*.gitignore</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/python</directory>
+          <includes>
+            <include>**/*.py</include>
+            <include>**/*.gitignore</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>README</include>
+            <include>.project</include>
+            <include>.classpath</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>.gitignore</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+
+     <module id="ERIC${rootArtifactId}_CXP1234567-pkg" dir="ERIC__rootArtifactId___CXP1234567-pkg" name="ERIC${rootArtifactId}_CXP1234567-pkg">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/assembly</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/resources-solaris</directory>
+          <includes>
+            <include>prototype</include>
+            <include>pkginfo</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>readme.txt</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+
+    <module id="testsuite" dir="testsuite" name="testsuite">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>.project</include>
+            <include>.classpath</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>**/*.xml</include>
+            <include>.gitignore</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+
+  </modules>
+
+</archetype-descriptor>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+    <groupId>com.ericsson.eniq</groupId>
+    <artifactId>eniq_sample_archetype</artifactId>
+    <version>1.0.1299-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>eniq-ci-sample-archetype</artifactId>
+  <packaging>maven-archetype</packaging>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-webdav-jackrabbit</artifactId>
+        <version>2.2</version>
+      </extension>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>2.2</version>
+      </extension>
+    </extensions>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>2.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <scm>
+    <connection>scm:git:ssh://eselivm2v238l.lmera.ericsson.se:29418/com.ericsson.eniq/eniq_sample_archetype</connection>
+    <developerConnection>scm:git:ssh://eselivm2v238l.lmera.ericsson.se:29418/com.ericsson.eniq/eniq_sample_archetype</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>assure-releases</id>
+      <name>ASSURE Releases</name>
+      <url>https://arm1s11-eiffel004.eiffel.gic.ericsson.se:8443/nexus/content/repositories/assure-releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>assure-snapshots</id>
+      <name>ASSURE Snapshots</name>
+      <url>https://arm1s11-eiffel004.eiffel.gic.ericsson.se:8443/nexus/content/repositories/assure-snapshots</url>
+    </snapshotRepository>
+    <site>
+      <id>assure-site</id>
+      <name>ASSURE Site</name>
+      <url>dav:https://arm1s11-eiffel004.eiffel.gic.ericsson.se:8443/nexus/content/sites/assure</url>
+    </site>
+  </distributionManagement>
+
+</project>
